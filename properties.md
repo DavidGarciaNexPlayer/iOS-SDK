@@ -741,7 +741,7 @@ By default, this property is set to 0 to download the first TS file completely t
 
 Allows custom ID3 tags added to timed metadata in content to be recognized and handled by NexPlayer. When customized ID3 tags with additional information have been added to the timed metadata in content, this property can be used to help NexPlayer recognize and pass those ID3 tags and the extra information they contain to an application.
 
-This property must be setbeforeopenis called.
+This property must be set before open is called.
 
 - Type: String
 - Values: a list of the customized ID3 tag names separated by semicolons (;)
