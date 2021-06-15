@@ -1,7 +1,7 @@
 # Enabling Video Synchronization Feature
 ## What is Nexplayer’s synchronization feature?
 
-NexPlayer synchronization feature technology allows you to synchronise the video arrival and stream video synchronously across different devices using the DASH SPD value. This is also possible for HLS streams by controlling the SPD value from the client-side.
+NexPlayer synchronization feature technology allows you to synchronze the video arrival and stream video synchronously across different devices using the DASH SPD value. This is also possible for HLS streams by controlling the SPD value from the client-side.
 ## How to enable synchronization feature in the sample application
 
 To get started we need an apk and at least two devices. 
@@ -28,13 +28,13 @@ Once we have configured what we need, we will play the content with SPD in the s
 
 **Local** → **GO TO URL** (at the top) → put the **URL** in the **“URL - Enter the URL”**
 
-Synchronization feature is highly dependent on the internet speed and the configuration of the manifest.
+The synchronization feature is highly dependent on the internet speed and the configuration of the manifest.
 
 ### Limitations
 
 - Only works with live content.
-- Device time should be adjusted correctly, incorrect device time or setting it manually might break the logic. This can be handled by using server time but the synchronisation won’t be precise as device time as server time is given in seconds, not in milliseconds as device time.
-- Setting a very low SPD value for the stream might affect smooth playback experience as it won’t allow the player to create enough buffer.
+- Device time should be adjusted correctly, incorrect device time or setting it manually might break the logic. This can be handled by using server time but the synchronization won’t be precise as device time as server time is given in seconds, not in milliseconds as device time.
+- Setting a very low SPD value for the stream might affect a smooth playback experience as it won’t allow the player to create enough buffer.
 
 ## How to enable synchronization feature from the code
 NexPlayer synchronization can be enabled by setting the following property:
@@ -49,12 +49,12 @@ Note that if the value of `SuggestedPresentationDelayTime` is too large or too s
  
 ## Advanced configuration
 
-You can control the synchronization behaviour further by adjusting the below properties.
+You can control the synchronization behavior further by adjusting the below properties.
  
  
 ## NXPropertyEnableSpdSyncToDeviceTime
 
-Enables synchronization to device UTC for more accurate behaviour.
+Enables synchronization to device UTC for more accurate behavior.
 
 `player.setProperty(NXPropertyEnableSpdSyncToDeviceTime, value: 1 as NSObject)`
 
@@ -79,7 +79,7 @@ This property should be called after init but before calling open.
 - Default: 300 (300 msec)
  
 ## NXPropertySpdTooMuchDiffTime
-If playback is out of sync than this value, the player will jump to synchronize the video rather than make it by speeding up.
+If playback is out of sync with this value, the player will jump to synchronize the video rather than make it by speeding up.
 
 `player.setProperty(NXPropertySpdTooMuchDiffTime, value: tooMuchDiffTime as NSObject)`
 
